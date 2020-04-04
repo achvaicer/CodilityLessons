@@ -6,7 +6,8 @@ namespace CodilityLessons
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Lesson2.CyclicRotation(new[] { 3, 8, 9, 7, 6 }, 3);
+            var a = Lesson2.OddOccurrencesInArray(new[] { 3, 3, 9, 9, 7 });
         }
     }
 }
