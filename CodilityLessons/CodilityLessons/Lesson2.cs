@@ -14,7 +14,7 @@ namespace CodilityLessons
             if (A.Length == 0) return A;
             for(var k = 0; k < K; k++)
             {
-                var last = A[A.Length - 1];
+                var last = A[^1];
                 for (var i = A.Length - 2; i >= 0; i--)
                 {
                     A[i + 1] = A[i];
@@ -29,7 +29,7 @@ namespace CodilityLessons
 
         public static int OddOccurrencesInArray(int[] A)
         {
-            return  A.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count()).First(x => x.Value == 1).Key;
+            return  A.GroupBy(x => x).ToDictionary(x => x.Key, x => x.Count()).First(x => x.Value % 2 == 1).Key;
         }
     }
 }
